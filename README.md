@@ -2,6 +2,7 @@
 
 This repository contains both the backend and frontend components of an e-commerce application. The backend is built with Django REST Framework, while the frontend utilizes Vue.js with TypeScript.
 
+
 ## Table of Contents
 - [Backend Architecture](#backend-architecture)
 - [Frontend Architecture](#frontend-architecture)
@@ -30,9 +31,7 @@ class Product:
 ```
 
 ### Key Features ⭐
-- Automatic slug generation for SEO-friendly URLs
-- Built-in data validation
-- JSON serialization support
+- Automatic slug generation for SEO-friendly URLs (not done to completion)
 - RESTful API endpoints
 
 ## Frontend Architecture
@@ -85,10 +84,8 @@ cartTotal             // Calculate total cart value
 
 ### Key Components
 - Product listings
-- Shopping cart
 - Product details
-- Responsive footer
-
+  
 ### Design Features
 - Mobile-first approach
 - Flexbox layout system
@@ -111,32 +108,20 @@ ALLOWED_HOSTS=localhost,127.0.0.1
 DB_NAME=your_db_name
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
-DB_HOST=localhost
-DB_PORT=5432
+DB_HOST=your_db_host
+DB_PORT=your_db_port
 
 # CORS Settings
-CORS_ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+CORS_ALLOWED_ORIGINS=['http://localhost:5173']
 
 # Static Files
 STATIC_URL=/static/
 MEDIA_URL=/media/
 ```
 
-2. Frontend Environment Setup
-Create a `.env` file in the root directory of the frontend project:
-```env
-# API Configuration
-VITE_API_BASE_URL=http://localhost:8000/api
-VITE_APP_TITLE=E-commerce Store
-
-# Development Settings
-VITE_DEV_SERVER_PORT=5173
-```
 
 ⚠️ Important Notes:
 - Never commit `.env` files to version control
-- Keep your secret keys secure
-- Use different environment configurations for development and production
 - Make sure to add `.env` to your `.gitignore` file
 
 ### Setting Up Development Environment
@@ -161,6 +146,7 @@ python manage.py runserver
 2. Frontend Setup
 ```bash
 # Install dependencies
+cd frontend
 npm install
 
 # Start development server
@@ -170,10 +156,8 @@ npm run dev
 ### Best Practices 🎯
 
 #### Backend
-- Use model validators for data integrity
-- Follow Django's REST framework conventions
+- Follow Django's conventions
 - Write docstrings for complex functions
-- Use appropriate HTTP methods for API endpoints
 
 #### Frontend
 - Use TypeScript for type safety
