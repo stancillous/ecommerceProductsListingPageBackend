@@ -13,8 +13,7 @@ This repository contains both the backend and frontend components of an e-commer
 
 ### Technology Stack 🔧
 - Django
-- Django REST Framework
-- SQLite (default database)
+- MySQL (default database)
 
 ### Data Models 📝
 
